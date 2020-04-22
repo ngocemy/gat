@@ -450,7 +450,7 @@ class DummyAnnotatorResult:
     def _fromLine(cls, line):
         x = cls()
         data = line[:-1].split("\t")
-        x.track, x.annotation = data[:2]
+        x.track, x.annotation = data[:1]
         x.counter = "na"
         x.observed, x.expected, x.lower95, x.upper95, x.stddev, x.fold, x.l2fold, x.pvalue, x.qvalue = \
             list(map(float, data[2:11]))
